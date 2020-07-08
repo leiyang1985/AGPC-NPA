@@ -1,0 +1,6 @@
+--2020-07-08 16:22:14--  https://github-production-release-asset-2e65be.s3.amazonaws.com/23216272/f601bc00-a44c-11ea-8601-4ec5b8c9cee5?X-Amz-Algorithm=AWS4-HMAC-SHA256
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)... 52.216.111.75
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)|52.216.111.75|:443... connected.
+HTTP request sent, awaiting response... 400 Bad Request
+2020-07-08 16:22:15 ERROR 400: Bad Request.
+
