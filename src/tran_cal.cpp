@@ -130,7 +130,7 @@ void tran_cal()
 		}
 		else
 		{
-			cout << "<" << J_l << "_" << order_l << "^" << pi_l << ",e_l=" << E_l << "||Q_" << k << "^" << norp << "||" << J_r << "_" << order_r << "^" << pi_r << ",e_r=" << E_r << ">: <||~||>= " << res / cg_cal(J_r, M_tot, Q_M[norp][Q_index].J, 0, J_l, M_tot) << " (hat J_l/ hat J_r)*<||~||>= " << res / cg_cal(J_r, M_tot, Q_M[norp][Q_index].J, 0, J_l, M_tot) * sqrt((J_l + 1) / double(J_r + 1)) << " D E= " << E_r - E_l << endl;
+			cout << "<" << J_l << "_" << order_l << "^" << pi_l << ",e_l=" << E_l << "||Q_" << k << "^" << norp << "||" << J_r << "_" << order_r << "^" << pi_r << ",e_r=" << E_r << ">: <||~||>= " << res / cg_cal(J_r, M_tot, Q_M[norp][Q_index].J, 0, J_l, M_tot) << " sqrt(hat J_l/ hat J_r)*<||~||>= " << res / cg_cal(J_r, M_tot, Q_M[norp][Q_index].J, 0, J_l, M_tot) * sqrt((J_l + 1) / double(J_r + 1)) << " D E= " << E_r - E_l << endl;
 		}
 	}
 }
