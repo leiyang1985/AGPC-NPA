@@ -794,7 +794,7 @@ void dig()
     for(int pi=0;pi<2;pi++)
     {
         int dim=dim_tot[pi];
-        int state_num=800;
+        int state_num=400;
         // cout<<"this is for pi="<<pi<<". how many low-lying states are you requairing:";
         // cin>>state_num;
         if(state_num>dim)
@@ -1026,18 +1026,18 @@ void dig()
             double *h_1d=new double [dim*dim];
             memset(h_1d,0,sizeof(double)*dim*dim);
             h_1d_out(h_1d,pi);
-            for(int i=0;i<dim;i++)
-            {
-                for(int j=0;j<dim;j++)
-                {
-                    if(isnan(h_1d[i+j*dim])==1)
-                    {
-                        cout<<i<<' '<<j<<' '<<h_1d[i+j*dim]<<endl;
-                        cin>>wat;
-                    }
-                }
-                // cout<<endl;
-            }
+            // for(int i=0;i<dim;i++)
+            // {
+            //     for(int j=0;j<dim;j++)
+            //     {
+            //         if(isnan(h_1d[i+j*dim])==1)
+            //         {
+            //             cout<<i<<' '<<j<<' '<<h_1d[i+j*dim]<<endl;
+            //             cin>>wat;
+            //         }
+            //     }
+            //     // cout<<endl;
+            // }
             char jobz='V';
             char range='I';
             char uplo='U';
