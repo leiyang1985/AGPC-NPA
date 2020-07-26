@@ -1,0 +1,5 @@
+2020.7.26 modify dig() function of eig.cpp in line 1054, original v array was declared in stack, and easily fill the stack, if more eigen is requaired. I put it in heap.
+2020.7.7 unified the input convention for angular momentum in sps.dat, and change one-body operator input index convention in tran_input.dat
+2020.5.17， begin to optimized the h_mv operation. before 2020.5.17 version, I construct H matrix from p and n space respectively. It saves memory, but the time is very unacceptable.
+2020.6.23 fix the bug for the reorginzation fo Rev_p_M0 array in the basis delete opertation during the basis filter. Put the Rev_p_M0 in the block_mat*.bin files just in case of the potential inconsistency of further binary reading.
+2020.6.23 modify the dig() function, some arraies were declared in stack, which would fill all stack if we want more eigstates. so I have to put them in heap.

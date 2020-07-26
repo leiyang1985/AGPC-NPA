@@ -810,7 +810,7 @@ void dig()
             continue;
         }
         if((state_num<dim_tot[pi]/2&&dim_tot[pi]>300))
-        // if(false)
+        // if(true)
         {
             int ido=0;
             char bmat='I';
@@ -1026,18 +1026,18 @@ void dig()
             double *h_1d=new double [dim*dim];
             memset(h_1d,0,sizeof(double)*dim*dim);
             h_1d_out(h_1d,pi);
-            // for(int i=0;i<dim;i++)
-            // {
-            //     for(int j=0;j<dim;j++)
-            //     {
-            //         if(isnan(h_1d[i+j*dim])==1)
-            //         {
-            //             cout<<i<<' '<<j<<endl;
-            //             cin>>wat;
-            //         }
-            //     }
-            //     cout<<endl;
-            // }
+            for(int i=0;i<dim;i++)
+            {
+                for(int j=0;j<dim;j++)
+                {
+                    if(isnan(h_1d[i+j*dim])==1)
+                    {
+                        cout<<i<<' '<<j<<' '<<h_1d[i+j*dim]<<endl;
+                        cin>>wat;
+                    }
+                }
+                // cout<<endl;
+            }
             char jobz='V';
             char range='I';
             char uplo='U';
@@ -1051,7 +1051,7 @@ void dig()
             int *iwork=new int [1];
             int liwork=-1;
             double e[state_num];
-            double v[state_num*dim_tot[pi]];
+            double *v=new double [state_num*dim_tot[pi]];
             int isuppz[2*state_num];
             int info;
             dsyevr_(&jobz,&range,&uplo,dim_tot+pi,h_1d,dim_tot+pi, &vl, &vu, &il, &iu, &abstol, &m, e, v, dim_tot+pi,isuppz, work,&lwork, iwork, &liwork, &info);
